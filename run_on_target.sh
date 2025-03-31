@@ -7,7 +7,7 @@
 
 # Check if the target host is set
 if [ -z "$TARGET_HOST" ]; then
-    echo "TARGET_HOST is not set" >&2
+    echo 'TARGET_HOST is not set! Type "export TARGET_HOST=yourhost:3333" to setup a connection to openocd.' >&2
     exit 1
 fi
 

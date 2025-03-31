@@ -2,7 +2,7 @@
 
 ## Setting up the build environment
 
-1. You have build a **_"pico-dev"_** container first. (See: https://)
+1. You have to build a **_"pico-dev"_** container first. (See: https://)
 
 To run and test this project
 do the following:
@@ -14,13 +14,13 @@ do the following:
 docker run -d -it --rm --name pico --mount type=bind,source=${PWD},target=/workspace pico-sdk
 ```
 
-There is a small shell script which does exactely that, so that you can just type
+There is a small shell script which does exactely that, so that you can instead just type:
 
 ```
 ./start_dev_container.sh
 ```
 
-instead. This will start a conainer named **_"pico"_**.
+This will start a conainer from the pico-dev image and name it **_"pico"_**.
 
 **NOTE: You have to start the container from within your project directories so that the project(s) are mounted to /workspace.**
 
