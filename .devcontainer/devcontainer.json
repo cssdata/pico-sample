@@ -1,0 +1,25 @@
+{
+    "name": "Pico SDK",
+    "image": "pico-sdk",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/sh"
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "twxs.cmake",
+                "ms-vscode.cmake-tools",
+                "marus25.cortex-debug",
+                "augustocdias.tasks-shell-input"
+            ]
+        }
+    },
+    "postCreateCommand": "echo 'Container setup complete!'",
+    "remoteUser": "root",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ]
+}
