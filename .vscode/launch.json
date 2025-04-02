@@ -1,0 +1,46 @@
+{
+    "inputs": [
+        {
+            "id": "PROJECT_ELF",
+            "type": "command",
+            "command": "shellCommand.execute",
+            "args": {
+                "command": "cat ./build/project_elf.txt",
+                "useFirstResult": "true",
+            }
+        },
+        {
+            "id": "OPENOCD_TARGET",
+            "type": "command",
+            "command": "shellCommand.execute",
+            "args": {
+                "command": "cat ./build/openocd_target.txt",
+                "useFirstResult": "true",
+            }
+        }
+    ],
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "${input:PROJECT_ELF}",
+            "name": "Debug",
+            "type": "cortex-debug",
+            "request": "attach",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "objdumpPath": "/usr/bin/arm-none-eabi-objdump",
+            //            "gdbTarget": "host.docker.internal:3333",
+            "gdbTarget": "${input:OPENOCD_TARGET}",
+            "servertype": "external",
+            "preLaunchTask": "debugbuild",
+            "postAttachCommands": [
+                "load",
+                "tbreak main",
+                "c"
+            ],
+            "searchDir": [
+                "${env:PICO_SDK_PATH}"
+            ],
+        }
+    ]
+}

@@ -2,7 +2,7 @@
 
 ## Setting up the build environment
 
-1. You have to build a **_"pico-dev"_** container first. (See: https://)
+1. You have to build a **_"pico-dev"_** container first. (See: https://github.com/cssdata/pico-dev)
 
 To run and test this project
 do the following:
