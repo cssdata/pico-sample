@@ -2,7 +2,7 @@
 
 ## Setting up the build environment
 
-1. You have to build a **_"pico-dev"_** container first. (See: https://github.com/cssdata/pico-dev)
+1. **You don't have to do anything!** This sample uses the **_"cssdata/pico-dev"_** container from github. It is an multi-arch container for the amd64 and arm64 architecture. If cou want to build the docker image yourself see https://github.com/cssdata/pico-dev.
 
 To run and test this project
 do the following:
@@ -11,7 +11,7 @@ do the following:
    current working directory is this directory, just type:
 
 ```bash
-docker run -d -it --rm --name pico --mount type=bind,source=${PWD},target=/workspace pico-sdk
+docker run -d -it --rm --name pico --mount type=bind,source=${PWD},target=/workspace cssdata/pico-dev
 ```
 
 There is a small shell script which does exactely that, so that you can instead just type:
@@ -20,7 +20,7 @@ There is a small shell script which does exactely that, so that you can instead 
 ./start_dev_container.sh
 ```
 
-This will start a conainer from the pico-dev image and name it **_"pico"_**.
+This will start a conainer from the cssdata/pico-dev image and name it **_"pico"_**.
 
 **NOTE: You have to start the container from within your project directories so that the project(s) are mounted to /workspace.**
 
