@@ -200,3 +200,14 @@ xPSR: 0xf1000000 pc: 0x000000ea msp: 0x20041f00
 [rp2040.core1] halted due to debug-request, current mode: Thread
 xPSR: 0xf1000000 pc: 0x000000ea msp: 0x20041f00
 ```
+
+# Doing it the easy way with the vscode dev-container plugin
+
+There is a ready-to-use vscode devcontainer setup and vscode launch configuration.
+
+So, if you are working with vscode and have **_"Dev Containers"_** installed:
+
+- click on your _"Open a Remote Window"_ icon (left bottom corner)
+- select _"Reopen in Container"_
+
+You can also use vscode debugging via gdb and openocd. Just build your project for debug and click on the debug icon in vscode.
