@@ -1,6 +1,6 @@
 {
     "name": "Pico SDK",
-    "image": "pico-sdk",
+    "image": "cssdata/pico-dev",
     "customizations": {
         "vscode": {
             "settings": {
